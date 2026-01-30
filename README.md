@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arkham Query Playground
 
-## Getting Started
+Playground de consultas SQL con autocompletado, ejecución contra API mock y paneles de resultados/historial.
 
-First, run the development server:
+## Descripción
+
+Este proyecto ofrece una interfaz para construir y ejecutar consultas SQL básicas sobre datasets mock. Incluye:
+
+- Editor tipo bloque de código con autocompletado (tablas, columnas, keywords y funciones).
+- Ejecución de consultas contra endpoints mock de Next.js.
+- Resultados en tabla con estados de carga y error.
+- Historial y guardado de consultas, persistidos en `localStorage`.
+- Soporte para tema claro/oscuro (toggle en el header).
+
+## Requisitos
+
+- Node.js 20+ recomendado
+- npm (o yarn/pnpm)
+
+## Tecnologías y versiones
+
+Dependencias principales:
+
+- Next.js 16.1.5
+- React 19.2.3
+- React DOM 19.2.3
+- Tailwind Merge 3.4.0
+- clsx 2.1.1
+
+Dev/Tooling:
+
+- TypeScript 5.x
+- Tailwind CSS 4.1.18
+- ESLint 9.x
+- Prettier 3.8.1
+- PostCSS 8.5.6
+
+## Scripts
+
+- `npm run dev` inicia el servidor de desarrollo
+- `npm run build` compila para producción
+- `npm run start` arranca el build de producción
+- `npm run lint` ejecuta ESLint
+- `npm run format` formatea con Prettier
+- `npm run format:check` valida formato
+
+## Endpoints mock
+
+Disponibles en Next.js API Routes:
+
+- `GET /api/core/user`
+- `GET /api/data/datasets`
+- `POST /api/data/query`
+
+## Estructura principal
+
+- `src/network` cliente HTTP
+- `src/data` acceso a APIs
+- `src/domain` tipos de dominio
+- `src/presentation` UI, hooks y estado
+- `src/mocks` datasets y resultados mock
+
+## Levantar el proyecto
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Abrir `http://localhost:3000`.

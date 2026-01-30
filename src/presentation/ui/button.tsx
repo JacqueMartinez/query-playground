@@ -27,7 +27,7 @@ function Button({
         disabled || loading ? 'opacity-60 cursor-not-allowed' : 'hover:opacity-95',
         variant === 'primary' && 'bg-white text-black shadow-[0_0_0_1px_rgba(255,255,255,0.10)]',
         variant === 'outline' &&
-          'border border-[#9bffb7]/60 bg-transparent text-white shadow-[0_0_0_1px_rgba(155,255,183,0.18)] hover:border-[#9bffb7]/90 hover:shadow-[0_0_24px_rgba(155,255,183,0.12)]',
+          'border border-[#9bffb7]/60 bg-transparent shadow-[0_0_0_1px_rgba(155,255,183,0.18)] hover:border-[#9bffb7]/90 hover:shadow-[0_0_24px_rgba(155,255,183,0.12)]',
 
         variant === 'ghost' && 'bg-transparent text-white/80 hover:bg-white/5 hover:text-white',
         size === 'sm' && 'h-9 px-3 text-sm',

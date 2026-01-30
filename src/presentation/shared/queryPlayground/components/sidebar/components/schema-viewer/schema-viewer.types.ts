@@ -1,4 +1,4 @@
-import type { DatasetSchema } from '@/mocks/datasets.types';
+import type { DatasetSchema } from '@/domain/datasets/types';
 
 export type SchemaViewerProps = {
   selectedDataset: DatasetSchema | undefined;

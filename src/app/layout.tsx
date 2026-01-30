@@ -1,4 +1,4 @@
-import './globals.css';
+import '@/styles/globals.css';
 
 export const metadata = {
   title: 'Arkham Query Playground',
@@ -8,7 +8,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body className="min-h-screen bg-[#0b1020] text-white antialiased">{children}</body>
+      <body className="theme-dark min-h-screen bg-[var(--app-bg)] text-[var(--text-primary)] antialiased">
+        {children}
+      </body>
     </html>
   );
 }
