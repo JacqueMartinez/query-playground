@@ -1,15 +1,15 @@
 import { SchemaViewer } from '../schema-viewer';
 import { Select } from '@/presentation/ui';
 import type { SidebarProps } from './sidebar.types';
-import { sidebarStyles as s } from './sidebar.styles';
+import { sidebarStyles as styled } from './sidebar.styles';
 
 function Sidebar({ label, datasets, selectedDatasetName, onChangeDataset }: SidebarProps) {
   const selectedDataset = datasets.find((d) => d.name === selectedDatasetName);
 
   return (
-    <aside className={s.aside}>
+    <aside className={styled.aside}>
       <div className="space-y-2">
-        <p className={s.label}>{label}</p>
+        <p className={styled.label}>{label}</p>
 
         <Select
           value={selectedDatasetName}
