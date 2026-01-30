@@ -1,7 +1,10 @@
-export default function Home() {
+import { LayoutShell } from '@/presentation/layout/LayoutShell';
+import { QueryPlayground } from '@/presentation/shared/queryPlayground';
+
+export default function Page() {
   return (
-    <main className="p-10">
-      <h1 className="text-4xl font-bold text-white">Arkham Query Playground</h1>
-    </main>
+    <LayoutShell>
+      <QueryPlayground />
+    </LayoutShell>
   );
 }
