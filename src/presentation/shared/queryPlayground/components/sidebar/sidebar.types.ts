@@ -1,8 +1,8 @@
+import type { DatasetMock } from '@/mocks/datasets.types';
+
 export type SidebarProps = {
-  schemesLabel: string;
-  schemeValue: string;
-  onChangeScheme: (value: string) => void;
-  tables: string[];
-  selectedTable: string;
-  onSelectTable: (table: string) => void;
+  label: string;
+  datasets: DatasetMock[];
+  selectedDatasetName: DatasetMock['name'];
+  onChangeDataset: (name: DatasetMock['name']) => void;
 };
