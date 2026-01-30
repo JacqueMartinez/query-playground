@@ -1,17 +1,17 @@
 import { cn } from '@/lib/cn';
 import type { ResultsPanelProps } from './results-panel.types';
-import { resultsPanelStyles as s } from './results-panel.styles';
+import { resultsPanelStyles as styled } from './results-panel.styles';
 
 function ResultsPanel({ columns, rows }: ResultsPanelProps) {
   return (
-    <div className={s.wrapper}>
-      <p className={cn(s.title, 'mt-10')}>Results:</p>
-      <div className={s.resultsGrid}>
+    <div className={styled.wrapper}>
+      <p className={cn(styled.title, 'mt-10')}>Results:</p>
+      <div className={styled.resultsGrid}>
         {Array.from({ length: columns }).map((_, col) => (
           <div key={col} className="space-y-4">
-            <p className={s.columnTitle}>Column</p>
+            <p className={styled.columnTitle}>Column</p>
             {Array.from({ length: rows }).map((__, row) => (
-              <p key={row} className={s.cell}>
+              <p key={row} className={styled.cell}>
                 Value
               </p>
             ))}
