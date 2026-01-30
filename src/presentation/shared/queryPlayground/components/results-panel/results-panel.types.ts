@@ -1,4 +1,7 @@
+import type { QueryResultRow } from '@/domain/query/types';
+
 export type ResultsPanelProps = {
-  columns: number;
-  rows: number;
+  results: QueryResultRow[];
+  error?: string | null;
+  isLoading?: boolean;
 };

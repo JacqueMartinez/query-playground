@@ -4,13 +4,20 @@ import { runBarStyles as styled } from './run-bar.styles';
 type RunBarProps = {
   onRun: () => void;
   label?: string;
+  isLoading?: boolean;
+  onSave?: () => void;
 };
 
-function RunBar({ onRun, label = 'Run' }: RunBarProps) {
+function RunBar({ onRun, label = 'Ejecutar', isLoading = false, onSave }: RunBarProps) {
   return (
     <div className={styled.wrapper}>
-      <Button variant="outline" onClick={onRun} className="w-[220px]">
-        <span className="text-white/90">✦</span> {label}
+      {onSave ? (
+        <Button variant="outline" onClick={onSave} className="w-[180px]" disabled={isLoading}>
+          Guardar consulta
+        </Button>
+      ) : null}
+      <Button variant="outline" onClick={onRun} className="w-[220px]" disabled={isLoading}>
+        <span>✦</span> {isLoading ? 'Ejecutando...' : label}
       </Button>
     </div>
   );
