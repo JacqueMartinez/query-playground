@@ -18,7 +18,7 @@ function HeaderBar() {
   return (
     <header className={styled.wrapper}>
       <div>
-        <img src="/logo.svg" className={styled.logo} />
+        <img src="/Logo.svg" className={styled.logo} />
       </div>
       <button
         type="button"
