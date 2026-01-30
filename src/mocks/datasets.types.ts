@@ -7,4 +7,4 @@ type DatasetMock = {
   schema: DatasetSchema;
 };
 
-export type { DatasetMock };
+export type { DatasetMock, DatasetSchema };
